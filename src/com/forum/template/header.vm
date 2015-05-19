@@ -1,0 +1,23 @@
+<div class="head">
+    <span class="poster"><img src="image/bg.jpg"/></span>
+    <div class="nav">
+        <span class="head-logo"><img src="image/mx_logo.png"/></span>
+        <div class="sub-nav">
+            <span><a href="">首页</a></span>
+            <span><a href="">最新</a></span>
+            <span><a href="">番组</a></span>
+            <span><a href="">漫画</a></span>
+            <span><a href="">特摄</a></span>
+            <span><a href="">讨论区</a></span>
+        </div>
+        <div class="sub-head">
+            <span><a href="login">登陆</a></span>
+            <span><a href="register">注册</a></span>
+        </div>
+    </div>
+    <hr>
+    <div class="mx middle">梦星字幕组</div>
+    <div class="search-box"><input placeholder="影视名称" type="text" name="search"><div></div></div>
+    <div class="middle">字幕仅作学习之用，版权归片方所有，本站禁止发布任何非法盗版资源下载地址</div>
+    <div class="middle">字幕は勉強に限り、版権はプロデューサーに所有し、本サイトは不法である資源が発表禁止でございます</div>
+</div>

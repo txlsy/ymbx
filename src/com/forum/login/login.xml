@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="login" namespace="/" extends="default">
+		<action name="login">
+			<result type="velocity">/com/forum/login/view/loginForm.vm</result>
+		</action>
+		<action name="dologin" class="com.forum.login.action.Login">
+			<result type="velocity">/com/forum/login/view/loged.vm</result>
+            <result name="index" type="redirectAction">
+                <param name="actionName">index</param>
+                <param name="namespace">/</param>
+            </result>
+		</action>
+	</package>
+</struts>

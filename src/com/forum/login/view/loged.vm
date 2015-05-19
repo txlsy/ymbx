@@ -1,0 +1,11 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  	<title>YuMeBoShi-Forum</title>
+  </head>
+  <body>
+    <p>ログイン成功</p>
+	<label>用户名：</label>$user.username
+	<label>密码：</label>$user.password
+  </body>
+</html>

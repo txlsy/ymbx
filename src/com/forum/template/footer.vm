@@ -1,0 +1,48 @@
+<div class="foot">
+    <div class="bottom">
+        <div class="info">
+            <div class="bottom-info">
+                <span class="info-title">时间表</span>
+                <ul class="info-list">
+                    <li><a href="">蓝光发售时间表</a></li>
+                    <li><a href="">番组播出时间表</a></li>
+                </ul>
+            </div>
+            <div class="bottom-info">
+                <span class="info-title">字幕站</span>
+                <ul class="info-list">
+                    <li><a href="">addic7ed</a></li>
+                    <li><a href="">sub-HD</a></li>
+                </ul>
+            </div>
+            <div class="bottom-info">
+                <span class="info-title">动漫资讯</span>
+                <ul class="info-list">
+                    <li><a href="">《看动漫》杂志官方微博</a></li>
+                    <li><a href="">bilibili</a></li>
+                </ul>
+            </div>
+            <div class="bottom-info">
+                <span class="info-title">特摄资讯</span>
+                <ul class="info-list">
+                    <li><a href="">假面骑士</a></li>
+                    <li><a href="">奥特曼</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="foot-bottom">
+        <span class="foot-left">
+            <a href="">MXSub.cn</a>成立于2015年5月
+        </span>
+        <span class="foot-right">
+            <span>RSS</span>
+            <span>番组订阅</span>
+            <span>特摄订阅</span>
+            <span>联系我们</span>
+            <span>问题反馈</span>
+            <span class="weibo">新浪微博</span>
+            <span class="weixin">微信</span>
+        </span>
+    </div>
+</div>

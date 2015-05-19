@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>YuMeBoShi-Forum</title>
+     <link rel="stylesheet" href="css/css.css">
+     <link rel="stylesheet" href="css/swiper/idangerous.swiper.css">
+  </head>
+  <body>
+    <div class="container">
+        #include("/com/forum/template/header.vm")
+        <div class="z">
+            <div class="pagination">
+                <span class="page-active">动漫</span>
+                <span>特摄</span>
+                <span>日剧</span>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="anime">
+                            #foreach($post in $posts)
+                                <div class="a">
+                                    <img src="image/post/$post.img" alt="$post.title"/>
+                                </div>
+                            #end
+                        </div>
+                    </div>
+                    <div class="swiper-slide">特摄</div>
+                    <div class="swiper-slide">日剧</div>
+                </div>
+            </div>
+        </div>
+        #include("/com/forum/template/footer.vm")
+    </div>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/swiper/idangerous.swiper.min.js"></script>
+    <script>
+        var postSwiper = new Swiper('.swiper-container',{
+            loop:true
+        });
+    </script>
+  </body>
+</html>
