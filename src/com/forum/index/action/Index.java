@@ -15,7 +15,7 @@ public class Index extends BaseAction {
     private int length;
     private ArrayList<Poster> posters;
     private PosterBean posterBean;
-    
+
     public int getLength() {
         return length;
     }

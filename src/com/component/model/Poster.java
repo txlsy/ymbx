@@ -8,6 +8,7 @@ public class Poster {
     private String title;
     private String img;
     private int id;
+    private int anime_id;
 
     public String getTitle() {
         return title;
@@ -31,5 +32,13 @@ public class Poster {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getAnime_id() {
+        return anime_id;
+    }
+
+    public void setAnime_id(int anime_id) {
+        this.anime_id = anime_id;
     }
 }

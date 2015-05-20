@@ -17,11 +17,7 @@ import java.util.Properties;
 /**
  * Created by Mark on 2015/5/19.
  */
-public class UserDaoTest implements UserDao {
-
-    private Connection connection = null;
-    private PreparedStatement preparedStatement = null;
-    private ResultSet resultSet = null;
+public class UserDaoTest extends BaseDao implements UserDao {
 
     @Override
     public User getById(int id) {

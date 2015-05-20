@@ -18,9 +18,9 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="anime">
-                            #foreach($post in $posts)
+                            #foreach($poster in $posters)
                                 <div class="a">
-                                    <img src="image/post/$post.img" alt="$post.title"/>
+                                    <img src="image/post/$poster.img" alt="$poster.title"/>
                                 </div>
                             #end
                         </div>
