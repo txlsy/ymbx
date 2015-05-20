@@ -1,8 +1,8 @@
 package com.forum.index.action;
 
-import com.component.bean.PostBeanTest;
-import com.component.bean.intf.PostBean;
-import com.component.model.Post;
+import com.component.bean.PosterBeanTest;
+import com.component.bean.intf.PosterBean;
+import com.component.model.Poster;
 import com.forum.action.BaseAction;
 
 import java.util.ArrayList;
@@ -13,36 +13,35 @@ import java.util.ArrayList;
 public class Index extends BaseAction {
 
     private int length;
+    private ArrayList<Poster> posters;
+    private PosterBean posterBean;
+    
     public int getLength() {
         return length;
     }
-
     public void setLength(int length) {
         this.length = length;
     }
 
-    private ArrayList<Post> posts;
-    public ArrayList<Post> getPosts() {
-        return posts;
+    public ArrayList<Poster> getPosters() {
+        return posters;
+    }
+    public void setPosters(ArrayList<Poster> posters) {
+        this.posters = posters;
     }
 
-    public void setPosts(ArrayList<Post> posts) {
-        this.posts = posts;
+    public PosterBean getPosterBean() {
+        return posterBean;
+    }
+    public void setPosterBean(PosterBean posterBean) {
+        this.posterBean = posterBean;
     }
 
-    private PostBean postBean;
-    public PostBean getPostBean() {
-        return postBean;
-    }
-
-    public void setPostBean(PostBean postBean) {
-        this.postBean = postBean;
-    }
 
     public String execute(){
-        postBean = new PostBeanTest();
-        posts = postBean.getIndexPosts();
-        setLength(posts.size());
+        posterBean = new PosterBeanTest();
+        posters = posterBean.getIndexPosts();
+        setLength(posters.size());
         return SUCCESS;
     }
 }

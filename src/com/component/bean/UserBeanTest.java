@@ -13,8 +13,8 @@ public class UserBeanTest implements UserBean {
         userDao = new UserDaoTest();
     }
 
-    public User getUser(int id){
-        return userDao.get(id);
+    public User getUserById(int id){
+        return userDao.getById(id);
     }
 
 	public User getUser(String key, String value) {

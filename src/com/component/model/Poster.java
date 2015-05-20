@@ -3,7 +3,7 @@ package com.component.model;
 /**
  * Created by Mark on 2015/5/14.
  */
-public class Post {
+public class Poster {
 
     private String title;
     private String img;

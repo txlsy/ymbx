@@ -2,6 +2,7 @@ package com.component.Dao;
 
 import com.component.Dao.intf.UserDao;
 import com.component.model.User;
+import com.component.util.DBUtil;
 import org.apache.struts2.ServletActionContext;
 
 import java.io.FileInputStream;
@@ -18,39 +19,12 @@ import java.util.Properties;
  */
 public class UserDaoTest implements UserDao {
 
-    private static Connection connection = null;
+    private Connection connection = null;
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
 
-    static {
-//        String config = "../config/db.properties";
-//        String path = ServletActionContext.getServletContext().getRealPath("db.properties");
-//        Properties properties = new Properties();
-//        try {
-//            properties.load(new FileInputStream(path));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        String driver = properties.getProperty("jdbc.driver");
-//        String url = properties.getProperty("jdbc.url");
-//        String username = properties.getProperty("jdbc.username");
-//        String password = properties.getProperty("jdbc.password");
-        try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            connection =  DriverManager.getConnection("jdbc:mysql://localhost:3306/ymbx","root","123456");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
-    }
-
     @Override
-    public User get(int id) {
+    public User getById(int id) {
         String sql = "SELECT * FROM user WHERE id = ?";
         return get("id",id+"");
     }
@@ -60,6 +34,7 @@ public class UserDaoTest implements UserDao {
         String sql = "SELECT * FROM user WHERE "+key+" = ?";
         User user = null;
         try {
+            connection = DBUtil.getConnection();
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, value);
             resultSet = preparedStatement.executeQuery();
@@ -72,6 +47,8 @@ public class UserDaoTest implements UserDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            DBUtil.release(resultSet,preparedStatement,connection);
         }
         return user;
     }
@@ -81,28 +58,4 @@ public class UserDaoTest implements UserDao {
         return null;
     }
 
-    @Override
-    public void close() {
-        if(connection!=null){
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        if(preparedStatement!=null){
-            try {
-                preparedStatement.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        if(resultSet!=null){
-            try {
-                resultSet.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 }
