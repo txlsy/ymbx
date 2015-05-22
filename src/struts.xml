@@ -29,6 +29,7 @@
     <include file="com/forum/login/login.xml"/>
     <include file="com/forum/reg/reg.xml"/>
     <include file="com/forum/article/article.xml"/>
+    <include file="com/forum/anime/anime.xml"/>
     <include file="example.xml"/>
 
     <!-- Add packages here -->

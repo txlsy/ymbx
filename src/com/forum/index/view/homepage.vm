@@ -3,7 +3,7 @@
   <head>
     <title>YuMeBoShi-Forum</title>
      <link rel="stylesheet" href="css/css.css">
-     <link rel="stylesheet" href="css/swiper/idangerous.swiper.css">
+     <link rel="stylesheet" href="css/swiper/swiper3.07.min.css"/>
   </head>
   <body>
     <div class="container">
@@ -19,10 +19,11 @@
                     <div class="swiper-slide">
                         <div class="anime">
                             #foreach($poster in $posters)
-                                <div class="a">
-                                    <img src="image/post/$poster.img" alt="$poster.title"/>
-                                </div>
+                            <div class="a" id="$poster.id">
+                                <a href="anime/view?id=$poster.id"><img src="image/post/$poster.img" alt="$poster.title"/></a>
+                            </div>
                             #end
+                            <div id="a-info" class="a-info"></div>
                         </div>
                     </div>
                     <div class="swiper-slide">特摄</div>
@@ -32,12 +33,13 @@
         </div>
         #include("/com/forum/template/footer.vm")
     </div>
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/swiper/idangerous.swiper.min.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/swiper/swiper3.07.jquery.min.js"></script>
+    <script src="js/index.js"></script>
     <script>
-        var postSwiper = new Swiper('.swiper-container',{
-            loop:true
-        });
+        var mySwiper = new Swiper ('.swiper-container', {
+            loop: true,
+        })
     </script>
   </body>
 </html>

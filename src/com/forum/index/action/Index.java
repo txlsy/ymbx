@@ -19,9 +19,6 @@ public class Index extends BaseAction {
     public int getLength() {
         return length;
     }
-    public void setLength(int length) {
-        this.length = length;
-    }
 
     public ArrayList<Poster> getPosters() {
         return posters;
@@ -41,7 +38,7 @@ public class Index extends BaseAction {
     public String execute(){
         posterBean = new PosterBeanTest();
         posters = posterBean.getIndexPosts();
-        setLength(posters.size());
+        this.length = posters.size();
         return SUCCESS;
     }
 }

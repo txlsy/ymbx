@@ -1,0 +1,14 @@
+#set($type="qita")
+#if($anime.type == 1)
+    #set($type="动画")
+#end
+<div class="a-info-over">
+    <div class="a-info-title">$anime.title</div>
+    <div class="a-info-type">$type</div>
+    <div class="a-info-des">$anime.decription</div>
+</div>
+<hr/>
+<div class="a-info-under">
+    <div class="a-info-stuff">$anime.stuff</div>
+    <div class="a-info-cast">$anime.cast</div>
+</div>

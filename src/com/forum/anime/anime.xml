@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="anime" namespace="/anime" extends="default">
+        <action name="view" class="com.forum.anime.action.AnimeAction">
+            <result type="velocity">/com/forum/anime/view/view.vm</result>
+        </action>
+        <action name="info" method="info" class="com.forum.anime.action.AnimeAction">
+            <result type="velocity" name="info">/com/forum/anime/view/info.vm</result>
+        </action>
+    </package>
+</struts>
