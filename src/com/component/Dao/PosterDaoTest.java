@@ -1,6 +1,6 @@
-package com.component.Dao;
+package com.component.dao;
 
-import com.component.Dao.intf.PosterDao;
+import com.component.dao.intf.PosterDao;
 import com.component.model.Poster;
 import com.component.util.DBUtil;
 

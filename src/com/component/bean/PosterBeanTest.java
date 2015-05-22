@@ -1,7 +1,7 @@
 package com.component.bean;
 
-import com.component.Dao.PosterDaoTest;
-import com.component.Dao.intf.PosterDao;
+import com.component.dao.PosterDaoTest;
+import com.component.dao.intf.PosterDao;
 import com.component.bean.intf.PosterBean;
 import com.component.model.Poster;
 

@@ -1,6 +1,5 @@
 package com.forum.anime.action;
 
-import com.component.Dao.AnimeDaoTest;
 import com.component.bean.AnimeBeanTest;
 import com.component.model.Anime;
 import com.forum.action.BaseAction;

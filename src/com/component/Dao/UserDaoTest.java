@@ -1,18 +1,12 @@
-package com.component.Dao;
+package com.component.dao;
 
-import com.component.Dao.intf.UserDao;
+import com.component.dao.intf.UserDao;
 import com.component.model.User;
 import com.component.util.DBUtil;
-import org.apache.struts2.ServletActionContext;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.Reader;
 import java.sql.*;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Properties;
 
 /**
  * Created by Mark on 2015/5/19.

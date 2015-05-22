@@ -1,11 +1,9 @@
-package com.component.Dao;
+package com.component.dao;
 
-import com.component.Dao.intf.AnimeDao;
+import com.component.dao.intf.AnimeDao;
 import com.component.model.Anime;
 import com.component.util.DBUtil;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 

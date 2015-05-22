@@ -1,4 +1,4 @@
-package com.component.Dao;
+package com.component.dao;
 
 import com.component.model.Anime;
 import junit.framework.TestCase;

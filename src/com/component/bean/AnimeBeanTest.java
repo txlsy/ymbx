@@ -1,6 +1,6 @@
 package com.component.bean;
 
-import com.component.Dao.AnimeDaoTest;
+import com.component.dao.AnimeDaoTest;
 import com.component.bean.intf.AnimeBean;
 import com.component.model.Anime;
 

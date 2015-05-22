@@ -1,6 +1,5 @@
-package com.component.Dao;
+package com.component.dao;
 
-import com.component.bean.UserBeanTest;
 import com.component.model.User;
 import junit.framework.TestCase;
 
