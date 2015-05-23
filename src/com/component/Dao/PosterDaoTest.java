@@ -1,6 +1,6 @@
-package com.component.dao;
+package com.component.Dao;
 
-import com.component.dao.intf.PosterDao;
+import com.component.Dao.intf.PosterDao;
 import com.component.model.Poster;
 import com.component.util.DBUtil;
 
@@ -13,7 +13,6 @@ import java.util.List;
  */
 public class PosterDaoTest extends BaseDao implements PosterDao {
 
-    @Override
     public List<Poster> getAll() {
         String sql = "SELECT * FROM poster";
         List<Poster> list = null;

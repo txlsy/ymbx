@@ -1,4 +1,4 @@
-package com.component.dao;
+package com.component.Dao;
 
 import com.component.model.User;
 import junit.framework.TestCase;

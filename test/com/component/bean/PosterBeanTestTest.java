@@ -14,4 +14,9 @@ public class PosterBeanTestTest extends TestCase {
         PosterBeanTest posterBeanTest = (PosterBeanTest) Container.getInstance().getComponent("posterBean");
         assertEquals(8,posterBeanTest.getIndexPosts().size());
     }
+
+    public void testGetIndexPostsWithInject() throws Exception {
+        PosterBeanTest posterBeanTest = new PosterBeanTest();
+        assertEquals(8,posterBeanTest.getIndexPosts().size());
+    }
 }

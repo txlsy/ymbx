@@ -1,4 +1,4 @@
-package com.component.dao.intf;
+package com.component.Dao.intf;
 
 import com.component.model.Poster;
 

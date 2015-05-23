@@ -1,10 +1,10 @@
 package com.forum.index.action;
 
-import com.component.bean.PosterBeanTest;
 import com.component.bean.intf.PosterBean;
 import com.component.common.Container;
 import com.component.model.Poster;
 import com.forum.action.BaseAction;
+import com.opensymphony.xwork2.inject.Inject;
 
 import java.util.ArrayList;
 
@@ -15,6 +15,8 @@ public class Index extends BaseAction {
 
     private int length;
     private ArrayList<Poster> posters;
+
+    @Inject(value = "posterBean")
     private PosterBean posterBean;
 
     public int getLength() {
@@ -37,7 +39,6 @@ public class Index extends BaseAction {
 
 
     public String execute(){
-        posterBean = (PosterBean) Container.getInstance().getComponent("posterBean");
         posters = posterBean.getIndexPosts();
         this.length = posters.size();
         return SUCCESS;

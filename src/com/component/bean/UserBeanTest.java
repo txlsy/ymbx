@@ -1,7 +1,7 @@
 package com.component.bean;
 
-import com.component.dao.UserDaoTest;
-import com.component.dao.intf.UserDao;
+import com.component.Dao.UserDaoTest;
+import com.component.Dao.intf.UserDao;
 import com.component.bean.intf.UserBean;
 import com.component.model.User;
 

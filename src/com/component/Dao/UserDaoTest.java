@@ -1,6 +1,6 @@
-package com.component.dao;
+package com.component.Dao;
 
-import com.component.dao.intf.UserDao;
+import com.component.Dao.intf.UserDao;
 import com.component.model.User;
 import com.component.util.DBUtil;
 

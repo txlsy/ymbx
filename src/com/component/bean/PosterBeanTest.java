@@ -1,10 +1,9 @@
 package com.component.bean;
 
-import com.component.common.Container;
-import com.component.dao.PosterDaoTest;
-import com.component.dao.intf.PosterDao;
 import com.component.bean.intf.PosterBean;
+import com.component.Dao.intf.PosterDao;
 import com.component.model.Poster;
+import com.opensymphony.xwork2.inject.Inject;
 
 import java.util.ArrayList;
 
@@ -13,9 +12,14 @@ import java.util.ArrayList;
  */
 public class PosterBeanTest implements PosterBean {
 
-    @Override
+    @Inject(value = "posterDao")
+    private PosterDao posterDao;
+
     public ArrayList<Poster> getIndexPosts() {
-        PosterDao posterDao = (PosterDao) Container.getInstance().getComponent("posterDao");
         return (ArrayList<Poster>) posterDao.getAll();
+    }
+
+    public void setPosterDao(PosterDao posterDao) {
+        this.posterDao = posterDao;
     }
 }

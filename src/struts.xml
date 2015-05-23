@@ -4,6 +4,8 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+    <bean class="com.component.bean.PosterBeanTest" type="com.component.bean.intf.PosterBean" name="posterBean"/>
+    <bean class="com.component.Dao.PosterDaoTest" name="posterDao" type="com.component.Dao.intf.PosterDao"/>
 
     <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />

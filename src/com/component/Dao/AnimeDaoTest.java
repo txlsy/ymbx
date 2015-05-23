@@ -1,6 +1,6 @@
-package com.component.dao;
+package com.component.Dao;
 
-import com.component.dao.intf.AnimeDao;
+import com.component.Dao.intf.AnimeDao;
 import com.component.model.Anime;
 import com.component.util.DBUtil;
 

@@ -1,7 +1,7 @@
 package com.component.common;
 
 import com.component.bean.PosterBeanTest;
-import com.component.dao.PosterDaoTest;
+import com.component.Dao.PosterDaoTest;
 
 import java.util.HashMap;
 import java.util.Map;
