@@ -1,5 +1,6 @@
 package com.component.bean;
 
+import com.component.common.Container;
 import com.component.dao.PosterDaoTest;
 import com.component.dao.intf.PosterDao;
 import com.component.bean.intf.PosterBean;
@@ -14,7 +15,7 @@ public class PosterBeanTest implements PosterBean {
 
     @Override
     public ArrayList<Poster> getIndexPosts() {
-        PosterDao posterDao = new PosterDaoTest();
+        PosterDao posterDao = (PosterDao) Container.getInstance().getComponent("posterDao");
         return (ArrayList<Poster>) posterDao.getAll();
     }
 }

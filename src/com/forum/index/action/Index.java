@@ -2,6 +2,7 @@ package com.forum.index.action;
 
 import com.component.bean.PosterBeanTest;
 import com.component.bean.intf.PosterBean;
+import com.component.common.Container;
 import com.component.model.Poster;
 import com.forum.action.BaseAction;
 
@@ -36,7 +37,7 @@ public class Index extends BaseAction {
 
 
     public String execute(){
-        posterBean = new PosterBeanTest();
+        posterBean = (PosterBean) Container.getInstance().getComponent("posterBean");
         posters = posterBean.getIndexPosts();
         this.length = posters.size();
         return SUCCESS;
