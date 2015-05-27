@@ -5,7 +5,13 @@
 
 <struts>
     <bean class="com.component.bean.PosterBeanTest" type="com.component.bean.intf.PosterBean" name="posterBean"/>
-    <bean class="com.component.Dao.PosterDaoTest" name="posterDao" type="com.component.Dao.intf.PosterDao"/>
+    <bean class="com.component.Dao.poster.PosterDaoMyBatis" name="posterDao" type="com.component.Dao.intf.PosterDao"/>
+
+    <bean class="com.component.bean.AnimeBeanTest" name="animeBean" type="com.component.bean.intf.AnimeBean"/>
+    <bean class="com.component.Dao.anime.AnimeDaoMyBatis" name="animeDao" type="com.component.Dao.intf.AnimeDao"/>
+
+    <bean class="com.component.bean.UserBeanTest" name="userBean" type="com.component.bean.intf.UserBean"/>
+    <bean class="com.component.Dao.user.UserDaoMyBatis" name="userDao" type="com.component.Dao.intf.UserDao"/>
 
     <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />

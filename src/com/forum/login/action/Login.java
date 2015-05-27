@@ -3,6 +3,7 @@ package com.forum.login.action;
 import java.util.Map;
 
 import com.forum.action.BaseAction;
+import com.opensymphony.xwork2.inject.Inject;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.SessionAware;
 
@@ -13,12 +14,10 @@ import com.component.model.User;
 public class Login extends BaseAction implements SessionAware {
 	private static final long serialVersionUID = -9202928079222902936L;
 	private User user;
-	private static UserBean userBean;
 	private Map<String, Object> session;
 
-    static {
-        userBean = new UserBeanTest();
-    }
+    @Inject(value = "userBean")
+    private UserBean userBean;
 
 	public User getUser() {
 		return user;

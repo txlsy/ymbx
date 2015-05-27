@@ -10,6 +10,7 @@ import java.util.List;
  */
 public interface UserDao {
     public User getById(int id);
+    public User getByName(String username);
     public User get(String key, String value);
     public List<User> get(HashMap<String, String> params);
 }

@@ -13,6 +13,7 @@ public interface UserBean {
 	 */
 	public boolean isEqual(User a, User b);
 	/**
+     * 过时：该方法设计的不合理，使用mybatis时不适用
 	 * 根据给定的用户属性和值查找用户
 	 * 例如：key为username，值为lsy
 	 * 则表示查找用户名为lsy的这个用户
@@ -20,6 +21,7 @@ public interface UserBean {
 	 * @param value 给定属性的值
 	 * @return 返回一个用户
 	 */
+    @Deprecated
 	public User getUser(String key, String value);
 	/**
 	 * 检验用户是否登陆成功

@@ -20,6 +20,11 @@ public class UserDaoTest extends BaseDao implements UserDao {
     }
 
     @Override
+    public User getByName(String username) {
+        return get("username",username);
+    }
+
+    @Override
     public User get(String key, String value) {
         String sql = "SELECT * FROM user WHERE "+key+" = ?";
         User user = null;
