@@ -1,3 +1,7 @@
-.idea/
-ymbx.iml
+#ignore all the files and folder begin with dot
+.*
+
+#ignore settings files of IDEA
+*.iml
+#ignore output folder
 out/
